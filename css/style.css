@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+:root{
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    --font1: 'Karla', sans-serif;
+    --font2:  'DM Serif Display', serif;
+
+    --padding-container: 80px 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font1);
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: var(--padding-container);
+}
+
+/*Hero*/
+
+
+.hero{
+    background-color: var(--dark-violet);
+    color: white;
+    --padding-container: 0;
+}
+
+.nav{
+    --padding-container: 0;
+    background-color: #fff;
+}
+
+.nav__container{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__links{
+    display: none;
+}
+
+.nav__icon, .nav__logo{
+    display: block;
+}
+
+.hero__main{
+    width: 100%;
+}
+
+.hero__main::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/image-intro-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__texts{
+    width: 90%;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-family: var(--font2);
+    letter-spacing: 3px;
+}
+
+.hero__paragraph{
+    line-height: 1.5;
+    margin-top: 1em;
+
+}
+
+.cta{
+    display: inline-block;
+    margin-top: 1.5em;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    padding: .8em 2.2em;
+}
+
+/*Different section*/
+
+.different{
+    text-align: center;
+}
+
+.title--different{
+    position: relative;
+    padding-top: 30px;
+}
+
+.title--different::before{
+    content: "";
+    position: absolute;
+    top:-5px;
+    right: 0;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--dark-grayish-violet);
+    width: 120px;
+    height: 1px;
+}
+
+.different__items{
+    margin-top: 3.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+}
+
+.different__icon{
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.different__title{
+    font-family: var(--font2);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.different__paragraph{
+    margin-top: 1em;
+    line-height: 1.5;
+    color: var(--dark-grayish-violet);
+}
+
+/* Find */
+
+.find{
+    padding: 80px 0;
+    --padding-container: 60px 30px;
+}
+
+.find__container{
+    position: relative;
+    color: #fff;
+    background-color: var(--dark-violet);
+    text-align: center;
+    z-index:1;
+}
+
+.find__container::before{
+    content:"";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    top: 0; 
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index:-1;
+}
+
+/* Footer */
+
+.footer{
+    background-color: var(--very-light-gray);
+    padding: 80px 0;
+    --padding-container: 60px 30px;
+}
+
+
+.footer__brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+
+    padding-bottom: 2.5em;
+    margin-bottom: 2.5em;
+    margin: 2rem;
+    
+    border-bottom: 1px solid var(--dark-grayish-violet);
+    
+}
+
+.footer__logo{
+    display: block;
+
+}
+
+.footer__media{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.footer__link{
+    text-decoration: none;
+    color: var(--dark-violet);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer__link--first{
+    margin-bottom: 1em;
+    color: var(--dark-grayish-violet);
+}
+
+@media (min-width: 768px) {
+
+    /* Hero */
+
+    .nav__links{
+        display: flex;
+        gap: 2em;
+    }
+
+    .nav__link{
+        text-decoration: none;
+        color: var(--dark-grayish-violet);
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: .8em 0;
+    }
+
+    .nav__link--cta{
+        color: var(--dark-violet);
+        border: 1px solid;
+        padding: .8em 2em;
+    }
+
+    .nav__hamburger{
+        display: none;
+    }
+
+    .hero{
+        background-image: linear-gradient(to bottom, var(--dark-violet) 75%, #fff 75%);
+    }
+    
+    .hero__main{
+        --padding-container: 100px 0;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .hero__main::before{
+        width: 48%;
+        height: 530px;
+        background-image: url('../images/image-intro-desktop.jpg');
+        order: 1;
+
+    }
+    
+    .hero__texts{
+        width: 49%;
+        padding: 20px 0;
+        text-align: left;
+        position: relative;
+    }
+
+    .hero__texts::before{
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 3px;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+
+    }
+    
+    .title{
+        font-size: 2.7rem;
+    }
+
+    /* Different */
+
+    .different{
+        text-align: left;
+    }
+    
+    .title--different{
+        position: relative;
+        padding-top: 30px;
+    }
+    
+    .title--different::before{
+        margin: 0;
+    }
+    
+    .different__items{
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .different__item{
+        flex: 1;
+    }
+    
+    .different__icon{
+        display: block;
+        margin-left: 0;
+        margin-bottom: 2em;
+    }
+    
+    .different__title{
+        font-family: var(--font2);
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+    
+    .different__paragraph{
+        margin-top: 1em;
+        line-height: 1.5;
+        color: var(--dark-grayish-violet);
+    }
+
+    /* Find */
+
+    .find{
+        --padding-container: 60px;
+    }
+
+    .find__container{
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .find__container::before{
+        background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    }
+
+    .title--find{
+        width: 60%;
+    }
+
+    /* Footer */
+
+    .footer__brand{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .footer__navigation{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__nav{
+        margin: 2rem;
+        width: 20%;
+        align-items: flex-start;
+    }
+}
