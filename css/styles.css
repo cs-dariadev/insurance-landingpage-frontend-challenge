@@ -45,10 +45,6 @@ body{
     background-color: #fff;
 }
 
-/* .nav.visible{
-    position: fixed;
-} */
-
 .nav__container{
     position: relative;
     height: 80px;

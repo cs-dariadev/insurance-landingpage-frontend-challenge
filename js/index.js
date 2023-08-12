@@ -22,6 +22,7 @@ function navMenuFixes(){
             close_btn.style.display='none';
             nav_link.forEach(nav_link=> nav_link.classList.remove('visible'));
             nav_links.forEach(nav_links=>nav_links.classList.remove('visible'));
+            body.style.overflowY = 'scroll';
         })
     }else {
         open_btn.style.display='block';
