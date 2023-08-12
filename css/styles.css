@@ -45,16 +45,23 @@ body{
     background-color: #fff;
 }
 
+/* .nav.visible{
+    position: fixed;
+} */
+
 .nav__container{
     position: relative;
     height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+
 .nav__links{
     display: none;
+    margin: 1rem;
 }
 
 .nav__link:hover{
@@ -72,6 +79,7 @@ body{
     background-image: url('../images/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,15 +108,16 @@ body{
 
 }
 
-.nav__icon, .nav__logo{
+.nav__logo{
     display: block;
+    margin: 0 2rem;
 }
 
 
 .nav__icon, .close__icon{
     position:absolute;
-    top:25px;
-    right:0;
+    top:23px;
+    right:15px;
 }
 
 .close__icon{
@@ -297,7 +306,7 @@ body{
 }
 
 .footer__link--first{
-    margin-bottom: 1em;
+    margin-top: 2rem;
     color: var(--dark-grayish-violet);
 }
 
